@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Profesional</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            transition: background 1s ease; /* Smooth transition for background change */
+            background-size: cover; /* Ensures background image covers the entire screen */
+            background-position: center center; /* Ensures the background is centered */
+        }
+
+        header {
+            background-color: rgba(255, 204, 0, 0.8);
+            color: black;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(51, 51, 51, 0.9);
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        .section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Profesional</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Subfolder 1</a></li>
+            <li><a href="#">Subfolder 2</a></li>
+            <li><a href="#">Subfolder 3</a></li>
+        </ul>
+    </nav>
+    <div class="section">
+        <h2>Selamat Datang</h2>
+        <p>Latar belakang gambar profesional telah diterapkan.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Website Profesional. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // Array of background images
+        var backgrounds = [
+            'file:///C:/Users/HSIM0135/OneDrive%20-%20Amman%20Mineral/Desktop/WEBSITE%20ANODE%20FURNACE/FOTO1.jpeg',
+            'file:///C:/Users/HSIM0135/OneDrive%20-%20Amman%20Mineral/Desktop/WEBSITE%20ANODE%20FURNACE/FOTO2.jpg',
+            'file:///C:/Users/HSIM0135/OneDrive%20-%20Amman%20Mineral/Desktop/WEBSITE%20ANODE%20FURNACE/FOTO3.jpeg'
+        ];
+
+        var currentIndex = 0; // Start with the first background
+
+        // Function to change the background
+        function changeBackground() {
+            document.body.style.backgroundImage = 'url(' + backgrounds[currentIndex] + ')';
+            currentIndex = (currentIndex + 1) % backgrounds.length; // Cycle through images
+        }
+
+        // Change background every 5 seconds
+        setInterval(changeBackground, 5000);
+
+        // Initially set the first background
+        changeBackground();
+    </script>
+</body>
+</html>
+
